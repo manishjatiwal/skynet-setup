@@ -1,0 +1,26 @@
+#!/bin/bash
+
+STEPS = 10
+
+# Updating packages
+sudo apt update
+
+# Install Helpers 
+sudo apt install -y git vim curl
+
+# STEP 1: ZSH setup
+# Install ZSH
+# Copy .zshrc at root
+
+# STEP 2: Neovim setup
+# Install Neovim
+# Install Packer - Package Manage for neovim
+# Install Riggrep - Complets searching in neovim
+# Copy nvim folder in .config folder
+
+ 
+# STEP 3: Nodejs Setup - Needed for copilot setup
+# Install Nodejs
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+source ~/.zshrc
+nvm i lts

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Copy .zshrc
+cp ~/.zshrc ~/Documents/Projects/skynet-setup
+
+# Copy .tmux.conf
+cp ~/.tmux.conf ~/Documents/Projects/skynet-setup
+
+# Copy i3 config
+cp -R ~/.config/i3 ~/Documents/Projects/skynet-setup
+
+
+# Copy neovim config
+cp -R ~/.config/nvim ~/Documents/Projects/skynet-setup
+
+
+# Copy scripts
+cp -R ~/scripts ~/Documents/Projects/skynet-setup
