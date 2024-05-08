@@ -23,17 +23,14 @@ lsp.setup()
 
 -- Autocomplete
 local cmp = require('cmp')
-local select = {behavior = cmp.SelectBehavior.Select}
 
 cmp.setup({
     sources = { {name = 'nvim_lsp'} },
     mapping = {
-        ['<C-y>'] = cmp.mapping.confirm({select = false}),
+        ['<C-y>'] = cmp.mapping.confirm({ select = false }),
         ['<C-e>'] = cmp.mapping.abort(),
-        ['<C-j>'] = cmp.mapping.select_prev_item(select),
-        ['<C-k>'] = cmp.mapping.select_next_item(select),
-        ['<C-p>'] = cmp.select_prev_item(select),
-        ['<C-n>'] = cmp.select_next_item(select),
+        ['<C-p>'] = cmp.mapping.select_prev_item({ behaviour = 'select' }),
+        ['<C-n>'] = cmp.mapping.select_next_item({ behaviour = 'select' }),
         ['<C-Space>'] = cmp.mapping.complete(),
     },
 })
