@@ -104,7 +104,10 @@ alias gs="git status"
 alias i3conf="vi ~/.config/i3/config"
 alias viconf="vi ~/.config/nvim"
 alias sourceZ="source ~/.zshrc"
+alias work="ssh manish.kumar@192.168.0.225"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH=$PATH:/usr/local/go/bin

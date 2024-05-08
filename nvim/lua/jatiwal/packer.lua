@@ -59,4 +59,10 @@ return require('packer').startup(function(use)
 			{'L3MON4D3/LuaSnip'},
 		}
 	}
+
+    -- Prettier
+    use {
+        'prettier/vim-prettier',
+        run = 'yarn install --frozen-lockfile --production'
+    }
 end)
