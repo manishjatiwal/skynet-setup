@@ -25,7 +25,9 @@ lsp.setup()
 local cmp = require('cmp')
 
 cmp.setup({
-    sources = { {name = 'nvim_lsp'} },
+    sources = { 
+        {name = 'nvim_lsp'},
+    },
     mapping = {
         ['<C-y>'] = cmp.mapping.confirm({ select = false }),
         ['<C-e>'] = cmp.mapping.abort(),
@@ -33,4 +35,5 @@ cmp.setup({
         ['<C-n>'] = cmp.mapping.select_next_item({ behaviour = 'select' }),
         ['<C-Space>'] = cmp.mapping.complete(),
     },
+    formatting = lsp.cmp_format({ details = true }),
 })
