@@ -23,10 +23,11 @@ lsp.setup()
 
 -- Autocomplete
 local cmp = require('cmp')
-
+require('luasnip.loaders.from_vscode').lazy_load()
 cmp.setup({
     sources = { 
         {name = 'nvim_lsp'},
+        {name = 'luasnip'},
     },
     mapping = {
         ['<C-y>'] = cmp.mapping.confirm({ select = false }),
