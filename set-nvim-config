@@ -2,4 +2,4 @@
 
 rm -rf ~/.config/nvim
 
-cp nvim ~/.config
+cp -R nvim ~/.config
