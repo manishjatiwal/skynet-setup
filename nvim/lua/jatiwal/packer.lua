@@ -68,4 +68,7 @@ return require('packer').startup(function(use)
 
     -- Game
     use 'ThePrimeagen/vim-be-good'
+    
+    -- Context
+    use 'nvim-treesitter/nvim-treesitter-context'
 end)
