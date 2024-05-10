@@ -65,4 +65,7 @@ return require('packer').startup(function(use)
         'prettier/vim-prettier',
         run = 'yarn install --frozen-lockfile --production'
     }
+
+    -- Game
+    use 'ThePrimeagen/vim-be-good'
 end)

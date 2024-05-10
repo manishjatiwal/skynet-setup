@@ -4,6 +4,10 @@ lsp.on_attach(function(client, bufnr)
     -- see :help lsp-zero-keybindings
     -- to learn the available actions
     lsp.default_keymaps({buffer = bufnr})
+
+    local opts = { buffer = bufnr, remap = false }
+
+    vim.keymap.set('n', '<leader>vca', vim.lsp.buf.code_action(), opts)
 end)
 
 -- to learn how to use mason.nvim
