@@ -7,14 +7,14 @@ lsp.on_attach(function(client, bufnr)
 
     local opts = { buffer = bufnr, remap = false }
 
-    vim.keymap.set('n', '<leader>vca', vim.lsp.buf.code_action(), opts)
+    vim.keymap.set('n', '<leader>vca', function () vim.lsp.buf.code_action() end, opts)
 end)
 
 -- to learn how to use mason.nvim
 -- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guide/integrate-with-mason-nvim.md
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = {'tsserver', 'eslint'},
+    ensure_installed = {'tsserver', 'eslint', 'gopls'},
     handlers = {
         function(server_name)
             require('lspconfig')[server_name].setup({})
